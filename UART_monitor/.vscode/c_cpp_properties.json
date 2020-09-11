@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/walidamriou/Documents/platform-atmelavr-develop/examples/native-blink/include",
+                "/home/walidamriou/Documents/platform-atmelavr-develop/examples/native-blink/src",
+                "/home/walidamriou/.platformio/lib/M5StickC/src",
+                "/home/walidamriou/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/walidamriou/Documents/platform-atmelavr-develop/examples/native-blink/include",
+                    "/home/walidamriou/Documents/platform-atmelavr-develop/examples/native-blink/src",
+                    "/home/walidamriou/.platformio/lib/M5StickC/src",
+                    "/home/walidamriou/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "F_CPU=16000000L",
+                "PLATFORMIO=50000",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/home/walidamriou/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
