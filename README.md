@@ -9,7 +9,7 @@ To Learn using AVR C to programming Atmel AVR boards with small programs example
 - 004 Blink LEDs function :heavy_check_mark:   
 - 005 Define pins and Blink LEDs simple way :heavy_check_mark:  
 - 006 On/off LED by button :heavy_check_mark:   
-* __003_Timer
+* __003 Timer__
 - 001 Output Signal in PD4 PIN with 100ms space mark Timer0  
 
 ### If you need any help or information:
