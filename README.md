@@ -10,8 +10,8 @@ To Learn using AVR C to programming Atmel AVR boards with small programs example
 - 005 Define pins and Blink LEDs simple way :heavy_check_mark:  
 - 006 On/off LED by button :heavy_check_mark:   
 * __003 Timer__
-- 001 Output Signal in PD4 PIN with 100ms space mark Timer0 :heavy_check_mark:  
-
+- 001 Output Signal in PD4 PIN with 100ms space/mark Timer0 8bit :heavy_check_mark:  
+- 002 Output Signal in PD4 PIN with 100ms space/mark Timer1 16bit :heavy_check_mark:  
 ### If you need any help or information:
 :large_blue_circle:	 Facebook: https://www.facebook.com/walidamriou   
 :large_blue_circle:  Twitter: https://twitter.com/walidamriou    
