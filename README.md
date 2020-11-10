@@ -12,6 +12,8 @@ To Learn using AVR C to programming Atmel AVR boards with small programs example
 * __003 Timer__
 - 001 Output Signal in PD4 PIN with 100ms space/mark Timer0 8bit :heavy_check_mark:  
 - 002 Output Signal in PD4 PIN with 100ms space/mark Timer1 16bit :heavy_check_mark:  
+- 003 Timer interrupts :heavy_check_mark: 
+
 ### If you need any help or information:
 :large_blue_circle:	 Facebook: https://www.facebook.com/walidamriou   
 :large_blue_circle:  Twitter: https://twitter.com/walidamriou    
