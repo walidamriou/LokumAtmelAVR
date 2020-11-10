@@ -41,19 +41,22 @@ The TCNT0 register hold the timer Count and it is incremented on every timer "ti
 If the timer is turned on it ticks from 0 to 65536 and overflows. 
 
 registers for timer 1:
-********* TCNT0
 
+********* TCNT1
 Timer/Counter 1
+
 TCNT1H	                        TCNT1L
 D15	D14	D13	D12	D11	D10	D9	D8	D7	D6	D5	D4	D3	D2	D1	D0
 
 ********* TCCR1A and TCCR1B
 
 TCCR1A: Timer Counter Control Register 1A
+
 D7	    D6	    D5	    D4	    D3	    D2	    D1	    D0
 COM1A1	COM1A0	COM1B1	COM1B0	FOC1A	FOC1B	WGM11	WGM10
 
 TCCR1B: Timer Counter Control Register 1B
+
 D7	    D6	    D5	    D4	    D3	    D2	    D1	    D0
 ICNC1	ICES1	-	    WGM13	WGM12	CS12	CS11	CS10
 
@@ -72,19 +75,23 @@ CS12	CS11	CS10	Freq
 
 
 ********* TIFR
+
 Timer/Counter1 Interrupt Flag Register – TIFR1
 
 D7	    D6	    D5	    D4	    D3	    D2	    D1	    D0
 –       –       ICF1    –       –       OCF1B   OCF1A   TOV1
 
 ********* TIMSK1
+
 Timer/Counter1 Interrupt Mask Register – TIMSK1
 
 D7	    D6	    D5	    D4	    D3	    D2	    D1	    D0
 –       –       ICIE1   –       –       OCIE1B  OCIE1A  TOIE1
 
 ------------------------------------------------------------------------------------------------------------
+
 ***** Example:
+
 For this work: Output Signal in PD4 PIN with 100ms space/mark
 
 Max delay:
@@ -110,6 +117,7 @@ So We write a simple program which will toggle a port pin (PD4) after the timer 
 
 void timer_interrupts_configure(){
 	// 65536 - 1562 = 63974
+	// increments TCNT1 until 65536 (MAX)
 	TCNT1 = 63974;   	
 	// Don't use TCCR1A
 	TCCR1A = 0x00;
@@ -121,20 +129,17 @@ void timer_interrupts_configure(){
 	sei();    
 }
 
-
 // Timer1 ISR
 ISR(TIMER1_OVF_vect){
 	PORTD ^= (1 << Output_signal_pin);	
 	// 65536 - 1562 = 63974
-	TCNT1 = 63974;   
+	TCNT1 = 63974;   	
 }
 
 int main(){
 	// Configure the PORTD4 as output
 	DDRD = (1 << Output_signal_pin);     
-    
 	timer_interrupts_configure();
-	
 	while(1){}
 }
 
